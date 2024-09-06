@@ -26,7 +26,7 @@ To build and run the game, you'll need the following:
 ### Using the Makefile
 1. Clone the repository to your local machine:
 ```sh
-    git clone <>
+    git clone git@github.com:rrodrig7/Tron_Game.git
     cd Tron_Game
 ```
 2. Compile the program 
@@ -54,9 +54,11 @@ This will generate the executable tron_game.
 If you prefer not to use the Makefile, you can manually compile the game using the following gcc command:
 ```sh
     gcc -o tron_game main.c init.c ai.c display.c game.c color.c -lncurses
-    ```
+```
+
 This will compile all the source files and link the ncurses library to generate the `tron_game` executable
 Run the executable file:
+
 ```sh
     ./tron_game
 ```
@@ -67,6 +69,7 @@ Movement: Control the player's directions using the arrow keys:
 - `Down` Arrow: Move down<br>
 - `Left` Arrow: Move Left<br>
 - `Right` Arrow: Move right<br>
+
 Avoid crashing into the walls, your own trail, or the opponent's trail.
 
 ## Future Features
