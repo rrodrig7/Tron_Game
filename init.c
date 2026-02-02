@@ -45,7 +45,7 @@ void init_player(struct tron *tron_player) {
     tron_player -> speed         = 50000;
 
     tron_player -> light_length  = 100;
-    tron_player -> light_pos     = 0;
+    tron_player -> light_pos     = 1;
     tron_player -> lose           = FALSE;
 }
 
@@ -59,7 +59,7 @@ void init_opponent(struct tron *tron_opponent) {
     tron_opponent -> direction     = KEY_LEFT;
     tron_opponent -> speed         = 50000;
     tron_opponent -> light_length  = 100; 
-    tron_opponent -> light_pos     = 0;
+    tron_opponent -> light_pos     = 1;
     tron_opponent -> lose           = FALSE;
 }
 

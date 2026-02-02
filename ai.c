@@ -61,10 +61,10 @@ void move_opponent(struct tron *tron_opponent, char grid[row][col], int ogrid[ro
     attron(tron_opponent->color);
     mvaddch(tron_opponent->ypos, tron_opponent->xpos, ACS_DIAMOND);
     grid[tron_opponent->ypos][tron_opponent->xpos] = 'O';
-    ogrid[tron_opponent->ypos][tron_opponent->xpos] = tron_opponent->light_pos++;
+    ogrid[tron_opponent->ypos][tron_opponent->xpos] = ++tron_opponent->light_pos;
 
     // Cleanup old light trail
-    if ((tron_opponent->light_pos - 100) >= 0) {
+    if ((tron_opponent->light_pos - 100) > 0) {
         for (int y = 0; y < row; y++) {
             for (int x = 0; x < col; x++) {
                 if (ogrid[y][x] == tron_opponent->light_pos - 100) {
